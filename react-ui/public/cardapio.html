@@ -186,17 +186,18 @@
 		</div>
 
 		<section id="contact">
-
 			<div class="row linha">
 				<form id="delivey" class="col s12 m4 l4 offset-m4 offset-l4 lb-nome grey darken-3" method="POST"
 					action="https://formspree.io/f/mqkobadr">
 					<div class="form-group input-field col s12">
 						<i class="material-icons prefix">face</i>
-						<input style="display: none;" value="PEDIDO" type="text" name="DELIVERY" class="form-control"
+						<input style="display: none;" type="text" name="DELIVERY" class="form-control"
 							id="recipient-name">
 						<input name="Nome" id="name" type="text" class="form-control" name="name" required>
 						<label for="name">Nome</label>
 					</div>
+					<input style="display: none;" id="valorDelivery" value="" type="text" name="VALOR R$"
+						class="form-control" id="recipient-name">
 					<div class="form-group input-field col s12">
 						<i class="material-icons prefix">location_on</i>
 						<input id="name" name="Endereço" type="text" class="form-control" name="name" required>
@@ -217,12 +218,12 @@
 						<div class="form-group input-field col s12">
 							<div class="btn-group" role="group" aria-label="Exemplo básico">
 								<button class="btn cyan waves-effect waves-light right" id="btnEnviar">Enviar</button>
-									<button style="margin-right: 1%;" id="limparBotao" type="button"
-										class="btn red waves-effect waves-light right">LIMPAR</button>
-									<div class="contador">
-										<label id="backContador">Total a pagar<p id="contador" class="form-control">R$0
-											</p></label>
-									</div>
+								<button style="margin-right: 1%;" id="limparBotao" type="button"
+									class="btn red waves-effect waves-light right">LIMPAR</button>
+								<div class="contador">
+									<label id="backContador">Total a pagar<p id="contador" class="form-control">R$0
+										</p></label>
+								</div>
 							</div>
 							<i class="mdi-content-send right"></i>
 						</div>

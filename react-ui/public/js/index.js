@@ -50,6 +50,7 @@ $('.incrementar').click(function () {
   soma = numero1 + numero2
 
   $('#contador').text("R$" + soma);
+  $('#valorDelivery').val(soma);
 });
 
 $(document).ready(function () {
