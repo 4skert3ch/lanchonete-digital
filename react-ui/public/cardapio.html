@@ -187,24 +187,22 @@
 
 			<div class="row linha">
 				<form class="col s12 m4 l4 offset-m4 offset-l4 lb-nome grey darken-3" method="POST"
-					action="https://formspree.io/gleidson@sisout.com">
+					action="https://formspree.io/f/mqkobadr">
+					<div class="input-field col s12">
+						<i class="material-icons prefix">face</i>
+						<input id="name" type="text" class="validate" name="name">
+						<label for="name">Nome</label>
+					</div>
 					<div class="input-field col s12">
 						<i class="material-icons prefix">location_on</i>
 						<input id="name" type="text" class="validate" name="name">
 						<label for="name">Endereço</label>
 					</div>
-					<div class="row">
-						<div class="input-field col s12">
-							<i class="material-icons prefix">local_phone</i>
-							<input id="email" type="email" class="validate" name="_replyto">
-							<label for="email">Telefone</label>
-						</div>
-					</div>
 					<input type="hidden" name="_subject" value="Assunto" />
 					<div class="row">
 						<div class="input-field col s12">
 							<i class="material-icons prefix">local_dining</i>
-							<textarea readonly="true" id="pedido" class="materialize-textarea" name="message"></textarea>
+							<textarea readonly="true" id="textarea" class="materialize-textarea pedido" name="message"></textarea>
 							<label style="display: none;" for="textarea">Pedido</label>
 						</div>
 					</div>
@@ -214,7 +212,7 @@
 						<div class="input-field col s12">
 							<div class="btn-group" role="group" aria-label="Exemplo básico">
 								<button class="btn cyan waves-effect waves-light right" type="submit">Enviar
-									<button style="margin-right: 1%;" type="button"
+									<button style="margin-right: 1%;" id="limparBotao" type="button"
 										class="btn red waves-effect waves-light right">LIMPAR</button>
 									<div class="contador">
 										<label id="backContador">Total a pagar<p id="contador">R$0</p></label>

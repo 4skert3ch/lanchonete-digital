@@ -56,13 +56,18 @@ $(document).ready(function() {
   $('.incrementar').click(function() {
     var nomeProduto = $(this).closest('.col').find('.nomeProduto').text();
     
-    var textoInput = $('#pedido').val();
+    var textoInput = $('.pedido').val();
     console.log(textoInput);
     
-    $('#pedido').val(textoInput + nomeProduto + " , ");
+    $('.pedido').val(textoInput + nomeProduto + ",");
 
   });
 });
 
+
+$('#limparBotao').click(function() {
+  $('.pedido').val('');
+  $('#contador').text("R$0");
+});
 
 
