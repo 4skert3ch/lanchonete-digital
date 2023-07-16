@@ -482,3 +482,51 @@ footer p {
 		top: -7px;
 	}
   }
+
+  .btnAdicionar:focus, .btnAdicionar::-moz-focus-inner{
+	outline:none;
+	border:none;
+  }
+  .btnAdicionar{
+	font-family: arial;
+	font-size:14px;
+	text-transform: uppercase;
+	font-weight:700;
+	border:none;
+	padding:10px;
+	cursor: pointer;
+	display:inline-block;
+	text-decoration: none;
+  }
+  .btnAdicionar-green{
+	background:green;
+	color:#fff;
+	box-shadow:0 5px 0 #006000;
+  }
+  .btnAdicionar-green:hover{
+	background:#006000;
+	box-shadow:0 5px 0 #003f00;
+  }
+  .btnAdicionar-purple{
+	background:purple;
+	color:#fff;
+	box-shadow:0 5px 0 #670167;
+  }
+  .btnAdicionar-purple:hover{
+	background:#670167;
+	box-shadow:0 5px 0 #470047;
+  }
+  .btnAdicionar-red{
+	background:red;
+	color:#fff;
+	box-shadow:0 5px 0 #d20000;
+  }
+  .btnAdicionar-red:hover{
+	background:#d20000;
+	box-shadow:0 5px 0 #b00000;
+  }
+  .btnAdicionar-green:active, .btn-purple:active, .btn-red:active{
+	position:relative;
+	top:5px;
+	box-shadow:none;
+  }
