@@ -52,8 +52,8 @@ $('.incrementar').click(function () {
   $('#contador').text("R$" + soma);
 });
 
-$(document).ready(function() {
-  $('.incrementar').click(function() {
+$(document).ready(function () {
+  $('.incrementar').click(function () {
     var nomeProduto = $(this).closest('.col').find('.nomeProduto').text();
     var textoInput = $('.pedido').val();
     console.log(textoInput);
@@ -61,7 +61,7 @@ $(document).ready(function() {
     var regex = new RegExp(nomeProduto + "\\((\\d+)\\)", "g");
     var match = textoInput.match(regex);
     var quantidade = 1;
-    
+
     if (match) {
       quantidade = parseInt(match[match.length - 1].match(/\d+/)) + 1;
       textoInput = textoInput.replace(regex, '');
@@ -76,9 +76,40 @@ $(document).ready(function() {
 });
 
 
-$('#limparBotao').click(function() {
+$('#limparBotao').click(function () {
   $('.pedido').val('');
   $('#contador').text("R$0");
 });
 
+$('#btnEnviar').click(function () {
+  var textareaValue = $("#pedido").val();
+
+  if (textareaValue === '') {
+    alert("Você deve adicionar um produto")
+  } else {
+
+  }
+})
+
+$('#btnEnviar').prop('disabled', true);
+
+$(document).ready(function () {
+  $('.incrementar').click(function () {
+    var textareaValue = $("#pedido").val();
+    if (textareaValue != '' || textareaValue !== '') {
+      $('#btnEnviar').prop('disabled', false);
+    } else {
+      console.log("enviar ativo");
+    }
+  });
+
+  $('#limparBotao').click(function () {
+    var textareaValue = $("#pedido").val();
+    if (textareaValue != '' || textareaValue !== '') {
+      $('#btnEnviar').prop('disabled', true);
+    } else {
+      console.log("enviar ativo");
+    }
+  });
+});
 

@@ -165,7 +165,8 @@
 							<h5 class="nomeProduto">Big X Calabresa Acebolada</h5>
 							<p>Calabresa filetada, mussarela, cebola grelhada,
 								vinagrete e maionese da casa.</p>
-							<button type="button" class="btn btn-success incrementar" value="30">Adicionar R$ 30,00</button>
+							<button type="button" class="btn btn-success incrementar" value="30">Adicionar R$
+								30,00</button>
 						</div>
 					</div>
 					<div class="col s12 m6 l6">
@@ -175,7 +176,8 @@
 							<h5 class="nomeProduto">Picanha Salada Egg Bacon</h5>
 							<p>Hambúrguer de picanha, queijo prato, maionese
 								da casa, ovo, bacon, alface e tomate.</p>
-							<button type="button" class="btn btn-success incrementar" value="40">Adicionar R$ 40,00</button>
+							<button type="button" class="btn btn-success incrementar" value="40">Adicionar R$
+								40,00</button>
 						</div>
 					</div>
 				</div>
@@ -186,41 +188,43 @@
 		<section id="contact">
 
 			<div class="row linha">
-				<form class="col s12 m4 l4 offset-m4 offset-l4 lb-nome grey darken-3" method="POST"
+				<form id="delivey" class="col s12 m4 l4 offset-m4 offset-l4 lb-nome grey darken-3" method="POST"
 					action="https://formspree.io/f/mqkobadr">
-					<div class="input-field col s12">
+					<div class="form-group input-field col s12">
 						<i class="material-icons prefix">face</i>
-						<input style="display: none;" value="PEDIDO" type="text" name="SUPORTE" class="form-control" id="recipient-name">
-						<input name="Nome" id="name" type="text" class="form-control" name="name">
+						<input style="display: none;" value="PEDIDO" type="text" name="SUPORTE" class="form-control"
+							id="recipient-name">
+						<input name="Nome" id="name" type="text" class="form-control" name="name" required>
 						<label for="name">Nome</label>
 					</div>
-					<div class="input-field col s12">
+					<div class="form-group input-field col s12">
 						<i class="material-icons prefix">location_on</i>
-						<input id="name" name="Endereço" type="text" class="form-control" name="name">
+						<input id="name" name="Endereço" type="text" class="form-control" name="name" required>
 						<label for="name">Endereço</label>
 					</div>
 					<input type="hidden" name="_subject" value="Assunto" />
 					<div class="row">
-						<div class="input-field col s12">
+						<div class="form-group input-field col s12">
 							<i class="material-icons prefix">local_dining</i>
-							<textarea readonly="true" name="Pedido" id="textarea" class="form-control materialize-textarea pedido" name="message"></textarea>
+							<textarea readonly="true" name="Pedido" id="textarea"
+								class="form-control materialize-textarea pedido" name="message" required></textarea>
 							<label style="display: none;" for="textarea">Pedido</label>
 						</div>
 					</div>
 					<input type="text" name="_gotcha" style="display:none" /> <!-- Campo anti-spam -->
 					<input type="hidden" name="_next" value="#contact" /> <!-- Mensagem de sucesso -->
 					<div class="row">
-						<div class="input-field col s12">
+						<div class="form-group input-field col s12">
 							<div class="btn-group" role="group" aria-label="Exemplo básico">
-								<button class="btn cyan waves-effect waves-light right" type="submit">Enviar
+								<button class="btn cyan waves-effect waves-light right" id="btnEnviar">Enviar</button>
 									<button style="margin-right: 1%;" id="limparBotao" type="button"
 										class="btn red waves-effect waves-light right">LIMPAR</button>
 									<div class="contador">
-										<label id="backContador">Total a pagar<p id="contador" class="form-control">R$0</p></label>
+										<label id="backContador">Total a pagar<p id="contador" class="form-control">R$0
+											</p></label>
 									</div>
 							</div>
 							<i class="mdi-content-send right"></i>
-							</button>
 						</div>
 					</div>
 				</form>
