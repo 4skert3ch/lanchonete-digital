@@ -425,3 +425,60 @@ footer p {
     height: 100vh;
 }
 
+.totalPagar {
+	height: 35.7px;
+	width: 80px;
+	position: relative;
+	left: 33.1%;;
+	color: green;
+}
+
+@media only screen and (max-width: 768px) {
+	.totalPagar{
+		height: 35.7px;
+		width: 80px;
+		position: relative;
+		left: 21.1%;
+		color: green;
+	}
+  }
+
+#CorCardapio{
+	background-color: rgba(22, 22, 29, 0.3);
+	position: relative;
+  }
+
+#contador{
+	position: relative;
+	top: -17px;
+}
+
+#backContador{
+	color: white;
+    position: relative;
+    top: 4px;
+}
+
+.contador{
+	background-color: rgba(0, 0, 0, 0.493);
+    margin-left: 10%;
+    margin-right: -10%;
+    height: 50px;
+    width: 103%;
+    position: relative;
+    right: 8.91%;
+    top: -7px;
+}
+
+@media only screen and (max-width: 768px) {
+	.contador{
+		background-color: rgba(0, 0, 0, 0.493);
+		margin-left: 10%;
+		margin-right: -10%;
+		height: 50px;
+		width: 103%;
+		position: relative;
+		right: 8.91%;
+		top: -7px;
+	}
+  }
