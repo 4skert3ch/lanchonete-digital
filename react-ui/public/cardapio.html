@@ -188,11 +188,12 @@
 		<section id="contact">
 			<div class="row linha">
 				<form id="delivey" class="col s12 m4 l4 offset-m4 offset-l4 lb-nome grey darken-3" method="POST"
-					action="https://formspree.io/f/mqkobadr">
+				action="https://formspree.io/f/mqkobadr">
+					<input type="hidden" name="" value="ENTREGA : Delivery" />
 					<div class="form-group input-field col s12">
 						<i class="material-icons prefix">face</i>
-						<input style="display: none;" type="text" name="DELIVERY" class="form-control"
-							id="recipient-name">
+						<input style="display: none;" id="valorDelivery" value="" type="text" name="VALOR R$"
+						class="form-control" id="recipient-name">
 						<input name="Nome" id="name" type="text" class="form-control" required>
 						<label for="name">Nome</label>
 					</div>
@@ -206,7 +207,6 @@
 						<input id="telefone" type="text" name="Telefone" class="form-control">
 						<label for="telefone">Telefone</label>
 					</div>
-					<input type="hidden" name="_subject" value="PEDIDO : Delivery" />
 					<div class="row">
 						<div class="form-group input-field col s12">
 							<i class="material-icons prefix">local_dining</i>
