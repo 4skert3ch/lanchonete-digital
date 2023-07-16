@@ -188,12 +188,10 @@
 		<section id="contact">
 			<div class="row linha">
 				<form id="delivey" class="col s12 m4 l4 offset-m4 offset-l4 lb-nome grey darken-3" method="POST"
-				action="https://formspree.io/f/mqkobadr">
-					<input type="hidden" name="" value="ENTREGA : Delivery" />
+					action="https://formspree.io/f/mqkobadr">
+					<input type="hidden" name="_subject" value="ENTREGA : Delivery" />
 					<div class="form-group input-field col s12">
 						<i class="material-icons prefix">face</i>
-						<input style="display: none;" id="valorDelivery" value="" type="text" name="VALOR R$"
-						class="form-control" id="recipient-name">
 						<input name="Nome" id="name" type="text" class="form-control" required>
 						<label for="name">Nome</label>
 					</div>
@@ -204,7 +202,7 @@
 					</div>
 					<div class="input-field col s12">
 						<i class="material-icons prefix">call</i>
-						<input id="telefone" type="text" name="Telefone" class="form-control">
+						<input id="telefone" type="text" name="Telefone" class="telefone form-control">
 						<label for="telefone">Telefone</label>
 					</div>
 					<div class="row">
@@ -220,6 +218,8 @@
 						<input id="observacao" type="text" name="Observação" class="form-control">
 						<label for="observacao">Observação</label>
 					</div>
+					<input style="display: none;" id="valorDelivery" value="" type="text" name="VALOR R$"
+						class="form-control" id="recipient-name">
 					<input type="text" name="_gotcha" style="display:none" /> <!-- Campo anti-spam -->
 					<input type="hidden" name="_next" value="#contact" /> <!-- Mensagem de sucesso -->
 					<div class="row">
@@ -276,6 +276,30 @@
 		<script type="text/javascript" src="./js/jquery.min.js"></script>
 		<script type="text/javascript" src="./js/materialize.min.js"></script>
 		<script type="text/javascript" src="./js/index.js"></script>
+		<script src="./js/custom-scripts.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+		<script>
+			jQuery(document).ready(function ($) {
+				$('.inputPreco').mask('000.000.000.000.000,00', { reverse: true });
+				jQuery("input.telefone")
+					.mask("(99) 00000-0000")
+					.focusout(function (event) {
+						var target, phone, element;
+						target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+						phone = target.value.replace(/\D/g, '');
+						element = $(target);
+						element.unmask();
+						if (phone.length > 10) {
+							element.mask("(99) 00000-0000");
+						} else {
+							element.mask("(99) 00000-0000");
+						}
+					});
+			});
+		</script>
 </body>
 
 </html>
