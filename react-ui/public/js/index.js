@@ -55,12 +55,23 @@ $('.incrementar').click(function () {
 $(document).ready(function() {
   $('.incrementar').click(function() {
     var nomeProduto = $(this).closest('.col').find('.nomeProduto').text();
-    
     var textoInput = $('.pedido').val();
     console.log(textoInput);
-    
-    $('.pedido').val(textoInput + nomeProduto + ",");
 
+    var regex = new RegExp(nomeProduto + "\\((\\d+)\\)", "g");
+    var match = textoInput.match(regex);
+    var quantidade = 1;
+    
+    if (match) {
+      quantidade = parseInt(match[match.length - 1].match(/\d+/)) + 1;
+      textoInput = textoInput.replace(regex, '');
+    }
+
+    if (textoInput.length === 0 || textoInput.slice(-1) === ")") {
+      $('.pedido').val(textoInput + nomeProduto + "(" + quantidade + ")");
+    } else {
+      $('.pedido').val(textoInput + " " + nomeProduto + "(" + quantidade + ")");
+    }
   });
 });
 
